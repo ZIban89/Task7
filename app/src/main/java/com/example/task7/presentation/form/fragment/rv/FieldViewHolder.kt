@@ -32,7 +32,7 @@ sealed class FieldViewHolder(binding: ViewBinding) : RecyclerView.ViewHolder(bin
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable?) {
-                field?.let{ saveValueCallback(it.id, s.toString())}
+                field?.let { saveValueCallback(it.id, s.toString()) }
             }
         }
 
@@ -60,7 +60,7 @@ sealed class FieldViewHolder(binding: ViewBinding) : RecyclerView.ViewHolder(bin
 
         fun bind(item: DropdownField) {
             binding.tvFieldTitle.text = item.title
-            //Создаю новый адаптер, т.к. у разных полей может отличаться набор опций.
+            // Создаю новый адаптер, т.к. у разных полей может отличаться набор опций.
             binding.spinnerFieldValue.adapter = CustomSpinnerAdapter(
                 binding.root.context, android.R.layout.simple_spinner_item, item.values
             )

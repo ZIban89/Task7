@@ -37,6 +37,5 @@ class GetFormUseCase @Inject constructor(
                 )
             )
         }
-
     }
 }

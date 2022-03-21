@@ -5,8 +5,9 @@ import com.example.task7.di.AppComponent
 import com.example.task7.di.ContextModule
 import com.example.task7.di.DaggerAppComponent
 
-class ClevertecApp: Application() {
+class ClevertecApp : Application() {
 
-    val appComponent: AppComponent by lazy { DaggerAppComponent.builder().contextModule(ContextModule(this)).build() }
-
+    val appComponent: AppComponent by lazy {
+        DaggerAppComponent.builder().contextModule(ContextModule(this)).build()
+    }
 }

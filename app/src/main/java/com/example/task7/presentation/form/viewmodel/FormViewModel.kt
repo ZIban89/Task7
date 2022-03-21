@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.task7.domain.Resource
 import com.example.task7.domain.model.ClevertecForm
 import com.example.task7.domain.model.DropdownField
-import com.example.task7.domain.model.Field
 import com.example.task7.domain.usecase.GetFormUseCase
 import com.example.task7.domain.usecase.SendFormUseCase
 import com.example.task7.presentation.UiState
@@ -85,5 +84,4 @@ class FormViewModel @Inject constructor(
     fun clearResult() {
         _resultUiState.value = UiState.Idle
     }
-
 }

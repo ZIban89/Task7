@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import com.example.task7.databinding.ItemSpinnerOptionBinding
 import com.example.task7.domain.model.Option
 
-//Можно было просто переопределить toString в Option. Я решил сделать так.
+// Можно было просто переопределить toString в Option. Я решил сделать так.
 class CustomSpinnerAdapter(
     context: Context,
     resource: Int,
@@ -28,6 +28,6 @@ class CustomSpinnerAdapter(
             else ItemSpinnerOptionBinding.bind(convertView)
         val item = getItem(position)
         item?.let { binding.textView.text = it.value }
-        return binding.root;
+        return binding.root
     }
 }

@@ -11,9 +11,9 @@ import dagger.Module
 interface RepositoryBindsModule {
 
     @Binds
-    fun bindClevertecRepository(repo: ClevertecRepositoryImpl) : ClevertecRepository
+    fun bindClevertecRepository(repo: ClevertecRepositoryImpl): ClevertecRepository
 
-    //не знаю есть ли смысл выносить
+    // Не знаю есть ли смысл выносить
     @Binds
     fun bindResourceProvider(provider: ResourceRepository): ResourceProvider
 }

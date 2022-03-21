@@ -4,5 +4,5 @@ class DropdownField(
     id: String,
     title: String,
     type: FieldType,
-    val values: List<Option>,
+    val values: List<Option>
 ) : Field(id, title, type)

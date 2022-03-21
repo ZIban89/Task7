@@ -2,11 +2,11 @@ package com.example.task7.presentation
 
 sealed class UiState<out T> {
 
-    object Loading: UiState<Nothing>()
+    object Loading : UiState<Nothing>()
 
-    class Error(val message: String): UiState<Nothing>()
+    class Error(val message: String) : UiState<Nothing>()
 
-    class Success<T>(val data: T): UiState<T>()
+    class Success<T>(val data: T) : UiState<T>()
 
-    object Idle: UiState<Nothing>()
+    object Idle : UiState<Nothing>()
 }

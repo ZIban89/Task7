@@ -22,5 +22,6 @@ class OptionsJsonAdapter {
 
     @ToJson
     fun toJson(writer: JsonWriter, value: List<OptionDto>?) {
+        throw UnsupportedOperationException()
     }
 }

@@ -1,9 +1,43 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 plugins {
     id 'com.android.application' version '7.1.2' apply false
     id 'com.android.library' version '7.1.2' apply false
     id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+    id "io.gitlab.arturbosch.detekt" version '1.17.0'
+    id "org.jlleitschuh.gradle.ktlint" version '9.2.1'
 }
+
+
+subprojects {
+    apply plugin: "org.jlleitschuh.gradle.ktlint"
+    ktlint {
+        debug = false
+    }
+}
+
+detekt {
+    toolVersion = "1.17.0"
+    config = files("config/detekt/detekt.yml")
+    buildUponDefaultConfig = true
+
+    input = files("app/src/main/java", "app/src/main/kotlin")
+
+    reports {
+        html {
+            enabled = true
+            destination = file("app/build/detekt/detekt.html")
+        }
+    }
+}
+
+tasks.detekt.jvmTarget = "1.8"
 
 task clean(type: Delete) {
     delete rootProject.buildDir
