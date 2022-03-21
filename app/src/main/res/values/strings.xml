@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Task7</string>
+    <string name="backend_exception_message">"Invalid data from server."</string>
+    <string name="internet_exception_message">"Internet connection error."</string>
+    <string name="unknown_exception_message">"An unknown error occurred."</string>
+    <string name="empty_result_dialog_bundle_message">There are no result message in the bundle.</string>
+    <string name="close_dialog_btn_label">Close dialog</string>
+    <string name="reload_dialog_btn_label">Reload form</string>
+    <string name="activity_not_found_exception_message">Activity not found in DialogFragment.</string>
+    <string name="send_form_btn_label">Send form</string>
+    <string name="btn_refresh_label">Refresh</string>
 </resources>
