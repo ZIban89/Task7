@@ -7,12 +7,11 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
-//const val CLEVERTEC_BASE_URL = "http://test.clevertec.ru/tt/"
-const val CLEVERTEC_BASE_URL = "http://10.0.2.2:3000/"
+const val CLEVERTEC_BASE_URL = "http://test.clevertec.ru/tt/"
 
 interface ClevertecApi {
 
-    @GET("tt")
+    @GET("meta")
     suspend fun getForm(): FormDto
 
     @POST("data/")
